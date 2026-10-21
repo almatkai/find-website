@@ -2,7 +2,7 @@ import { environment, getPreferenceValues, List, Icon } from "@raycast/api";
 import { useState } from "react";
 import { FinalStep } from "./step";
 import { Step } from "./step";
-import { copyFileSync, existsSync } from "fs";
+import { copyFileSync, existsSync, mkdirSync } from "fs";
 import { Factory } from "./factory";
 
 import React from "react";
@@ -12,18 +12,31 @@ export default function Command() {
 
   const prefs = getPreferenceValues<Preferences>();
 
-  const browserPaths = {
-    chrome: "/Applications/Google Chrome.app",
-    firefox: "/Applications/Firefox.app",
-    safari: "/Applications/Safari.app",
-    edge: "/Applications/Microsoft Edge.app",
-    brave: "/Applications/Brave Browser.app",
-    vivaldi: "/Applications/Vivaldi.app",
-    opera: "/Applications/Opera.app",
-    arc: "/Applications/Arc.app",
-    orion: "/Applications/Orion.app",
-    zen: "/Applications/Zen Browser.app",
-  };
+  const browserPaths = process.platform === "win32"
+    ? {
+        chrome: `${process.env.LOCALAPPDATA || ""}\\Google\\Chrome\\User Data\\${prefs.profile}\\History`,
+        firefox: `${process.env.APPDATA || ""}\\Mozilla\\Firefox\\profiles.ini`,
+        safari: "",
+        edge: `${process.env.LOCALAPPDATA || ""}\\Microsoft\\Edge\\User Data\\Default\\History`,
+        brave: `${process.env.LOCALAPPDATA || ""}\\BraveSoftware\\Brave-Browser\\User Data\\Default\\History`,
+        vivaldi: `${process.env.LOCALAPPDATA || ""}\\Vivaldi\\User Data\\Default\\History`,
+        opera: `${process.env.APPDATA || ""}\\Opera Software\\Opera Stable\\History`,
+        arc: `${process.env.LOCALAPPDATA || ""}\\Arc\\User Data\\Default\\History`,
+        orion: "",
+        zen: "",
+      }
+    : {
+        chrome: "/Applications/Google Chrome.app",
+        firefox: "/Applications/Firefox.app",
+        safari: "/Applications/Safari.app",
+        edge: "/Applications/Microsoft Edge.app",
+        brave: "/Applications/Brave Browser.app",
+        vivaldi: "/Applications/Vivaldi.app",
+        opera: "/Applications/Opera.app",
+        arc: "/Applications/Arc.app",
+        orion: "/Applications/Orion.app",
+        zen: "/Applications/Zen Browser.app",
+      };
 
   function isBrowserInstalled(browser: keyof typeof browserPaths) {
     const path = browserPaths[browser];
@@ -52,6 +65,11 @@ export default function Command() {
 
   function onChange(newText: string) {
     setLoading(true);
+    if (!existsSync(src)) {
+      setLoading(false);
+      return;
+    }
+    mkdirSync(dir, { recursive: true });
     copyFileSync(src, dir);
 
     const flow = new Step(

@@ -3,7 +3,7 @@
   "name": "find-website",
   "title": "Find Website",
   "description": "Quickly find the website you are looking for.",
-  "icon": "logo.png",
+  "icon": "assets/logo.png",
   "author": "almatkai",
   "contributors": [
     "ridemountainpig"

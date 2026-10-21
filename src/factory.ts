@@ -49,6 +49,16 @@ import { homedir } from "os";
 import ini from "ini";
 import fs from "node:fs";
 
+function windowsAppDataPath(...segments: string[]): string {
+  const base = process.env.LOCALAPPDATA || resolve(homedir(), "AppData/Local");
+  return resolve(base, ...segments);
+}
+
+function windowsRoamingPath(...segments: string[]): string {
+  const base = process.env.APPDATA || resolve(homedir(), "AppData/Roaming");
+  return resolve(base, ...segments);
+}
+
 export class Factory<T extends Record> {
   getQueryBuilder(): QueryBuilder {
     return new ChromeQueryBuilder();
@@ -105,7 +115,9 @@ class OrionFactory extends Factory<OrionRecord> {
   }
 
   getSrc(): string {
-    return resolve(homedir(), "Library/Application Support/Orion/Defaults/history");
+    return process.platform === "win32"
+      ? windowsAppDataPath("Orion", "Defaults", "history")
+      : resolve(homedir(), "Library/Application Support/Orion/Defaults/history");
   }
 }
 
@@ -129,7 +141,9 @@ class SafariFactory extends Factory<SafariRecord> {
 
 class ArcFactory extends Factory<ArcRecord> {
   getSrc(): string {
-    return resolve(homedir(), "Library/Application Support/Arc/User Data/Default/History");
+    return process.platform === "win32"
+      ? windowsAppDataPath("Arc", "User Data", "Default", "History")
+      : resolve(homedir(), "Library/Application Support/Arc/User Data/Default/History");
   }
 
   getQueryBuilder(): QueryBuilder {
@@ -152,7 +166,9 @@ class ChromeFactory<T extends ChromeRecord> extends Factory<T> {
   }
 
   getSrc(): string {
-    return resolve(homedir(), `Library/Application Support/Google/Chrome/${this.profile}/History`);
+    return process.platform === "win32"
+      ? windowsAppDataPath("Google", "Chrome", "User Data", this.profile, "History")
+      : resolve(homedir(), `Library/Application Support/Google/Chrome/${this.profile}/History`);
   }
 
   constructor(profile: string) {
@@ -185,7 +201,9 @@ class BraveFactory extends ChromeFactory<BraveRecord> {
   }
 
   getSrc(): string {
-    return resolve(homedir(), `Library/Application Support/BraveSoftware/Brave-Browser/Default/History`);
+    return process.platform === "win32"
+      ? windowsAppDataPath("BraveSoftware", "Brave-Browser", "User Data", "Default", "History")
+      : resolve(homedir(), `Library/Application Support/BraveSoftware/Brave-Browser/Default/History`);
   }
 }
 
@@ -206,7 +224,9 @@ class VivaldiFactory extends ChromeFactory<VivaldiRecord> {
   }
 
   getSrc(): string {
-    return resolve(homedir(), `Library/Application Support/Vivaldi/Default/History`);
+    return process.platform === "win32"
+      ? windowsAppDataPath("Vivaldi", "User Data", "Default", "History")
+      : resolve(homedir(), `Library/Application Support/Vivaldi/Default/History`);
   }
 }
 
@@ -227,7 +247,9 @@ class OperaFactory extends ChromeFactory<OperaRecord> {
   }
 
   getSrc(): string {
-    return resolve(homedir(), `Library/Application Support/com.operasoftware.Opera/Default/History`);
+    return process.platform === "win32"
+      ? windowsRoamingPath("Opera Software", "Opera Stable", "History")
+      : resolve(homedir(), `Library/Application Support/com.operasoftware.Opera/Default/History`);
   }
 }
 
@@ -248,7 +270,9 @@ class EdgeFactory extends ChromeFactory<EdgeRecord> {
   }
 
   getSrc(): string {
-    return resolve(homedir(), `Library/Application Support/Microsoft Edge/Default/History`);
+    return process.platform === "win32"
+      ? windowsAppDataPath("Microsoft", "Edge", "User Data", "Default", "History")
+      : resolve(homedir(), `Library/Application Support/Microsoft Edge/Default/History`);
   }
 }
 
@@ -265,7 +289,9 @@ class FirefoxFactory<T extends FirefoxRecord> extends Factory<T> {
   }
 
   getBaseDir(): string {
-    return "Library/Application Support/Firefox";
+    return process.platform === "win32"
+      ? resolve(process.env.APPDATA || resolve(homedir(), "AppData/Roaming"), "Mozilla", "Firefox")
+      : "Library/Application Support/Firefox";
   }
 
   getSrc(): string {
