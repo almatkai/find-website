@@ -1,0 +1,337 @@
+{
+  "results": [
+    {
+      "name": "bootstrap",
+      "command": [
+        "python3",
+        "scripts/bootstrap.py"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "0d346b877d666f3f9f3a096ce7c0880d7fe2a66cfe1a37727663f3094265ed95"
+    },
+    {
+      "name": "v1-test",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "33cb1f39e65a82b5b183fe4962d93654d89e76604ea8993f62436ec6d43c39dd"
+    },
+    {
+      "name": "v1-typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "62208d2436a93304f1e88cd1366ac7e06325e8846c88974e04bff06896b69c6e"
+    },
+    {
+      "name": "host-patch",
+      "command": [
+        "python3",
+        "scripts/make_host_patch.py"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "47be03e989bc8db8101e708a7a6ad61ac8f43d371e3ec2aac5027b207065d5c7"
+    },
+    {
+      "name": "original-oracle",
+      "command": [
+        "node",
+        "scripts/oracle.cjs"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "681bcfbd1a23b50bda4eee15ce7696265e3c24723dbccd6b8a753a5c74cdd597"
+    },
+    {
+      "name": "locked-library",
+      "command": [
+        "node",
+        "scripts/locked_library.cjs"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "72f571c1000cd75a6517612716dd6e59ca0191a0635ce77aef549d949affe310"
+    },
+    {
+      "name": "qa-oracle-build",
+      "command": [
+        "cargo",
+        "build",
+        "--locked",
+        "--example",
+        "oracle"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "4f27ac380b22e1d975eee20ce727fa8cbc09061177f6253af0777fd4de7b7506"
+    },
+    {
+      "name": "sqlite-source-parity",
+      "command": [
+        "python3",
+        "scripts/parity.py"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "0d518acdf97c0b847bdd10055e1e6d33687e13faafd13cef137c72483e2b1494"
+    },
+    {
+      "name": "renderer",
+      "command": [
+        "node",
+        "scripts/renderer.cjs"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "15bfec62e1882643b431df7f1014f77e0917f42b01cc2ca3ae975a44c2af09c9"
+    },
+    {
+      "name": "schema3",
+      "command": [
+        "node",
+        "scripts/schema.cjs"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "881249ac69b8aaf19057c21db6df5e7de9455870a84c77c9f6c83d503d71939c"
+    },
+    {
+      "name": "pinned-host-producer",
+      "command": [
+        "python3",
+        "scripts/host_producer.py"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "8b5f0d67a2a549acaa2e15a2f4d7054d5d33c81a1f088336cad5993b41bca47d"
+    },
+    {
+      "name": "fmt",
+      "command": [
+        "cargo",
+        "fmt",
+        "--",
+        "--check"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "stable-tests",
+      "command": [
+        "cargo",
+        "test",
+        "--locked"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "276eaade12afac174c1f4548c81ff754034c96d2b8a30f63d4704386629b9724"
+    },
+    {
+      "name": "stable-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "8c233a54790c4800d3dd585436af679aa838da259bfdb129412e2d51cdb75cdc"
+    },
+    {
+      "name": "1.85.0-tests",
+      "command": [
+        "cargo",
+        "test",
+        "--locked"
+      ],
+      "toolchain": "1.85.0",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "0c2665532d10013491dd51180a244ff4fb1a961d2816b775fc08c38c0865ebc8"
+    },
+    {
+      "name": "1.85.0-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "toolchain": "1.85.0",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "99f71393b9903dca098310bb446022a4bdee195ea9996f351a787195555210a6"
+    },
+    {
+      "name": "production-debug-build",
+      "command": [
+        "cargo",
+        "build",
+        "--locked"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "99f71393b9903dca098310bb446022a4bdee195ea9996f351a787195555210a6"
+    },
+    {
+      "name": "production-pipes",
+      "command": [
+        "python3",
+        "scripts/pipes.py"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "46d0142ac6663523f0cf5e5dda8be5474e3b6edd6a96209b827c370be2cceedd"
+    },
+    {
+      "name": "mac-production-pipes",
+      "command": [
+        "python3",
+        "scripts/mac_pipes.py"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "cda3db2fa800c520af8bb95732b8c646b850796630f92fd33bee6ff7a6b102c6"
+    },
+    {
+      "name": "windows-gnu-check",
+      "command": [
+        "cargo",
+        "check",
+        "--locked",
+        "--target",
+        "x86_64-pc-windows-gnu"
+      ],
+      "toolchain": "stable",
+      "state": "blocked",
+      "exitCode": 101,
+      "logSha256": "b0b07be088ae1835dccdf9e08baee88a866fba60db71bb2cab0c761670c32401"
+    },
+    {
+      "name": "windows-gnu-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--all-targets",
+        "--target",
+        "x86_64-pc-windows-gnu",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "toolchain": "stable",
+      "state": "blocked",
+      "exitCode": 101,
+      "logSha256": "b0b07be088ae1835dccdf9e08baee88a866fba60db71bb2cab0c761670c32401"
+    },
+    {
+      "name": "windows-lock-metadata",
+      "command": [
+        "python3",
+        "scripts/windows_lock.py"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "aab2c293c305a6ff8e7145479e9d3f0cbf91ab57fee2204657d0bc7d745ed880"
+    },
+    {
+      "name": "all-archive-fetch",
+      "command": [
+        "cargo",
+        "fetch",
+        "--locked"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "archive-license-icon-audit",
+      "command": [
+        "python3",
+        "scripts/licenses.py"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "90fceb3bf086ae044f4c4c1f112845dce9843a9b64c04231b3a228b51ec9ab89"
+    },
+    {
+      "name": "empty-home-https-production",
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "6bcc9088dbfaf8e14d639dfb5892466dffb313408b91d6b3415c9bbd947da455"
+    },
+    {
+      "name": "deterministic-zip-extracted-pipes",
+      "command": [
+        "python3",
+        "scripts/package.py",
+        "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/find-website/v2/.qa/fresh-target-1fb856c44dea47f880e4915fc54a3427/release/find-website-v2"
+      ],
+      "toolchain": "stable",
+      "state": "passed",
+      "exitCode": 0,
+      "logSha256": "e92590c9859eda4e179c2a1b56a88a70c1cbfc9d866aaf257fddbdf0bbb8aa08"
+    }
+  ],
+  "nativeHostAcceptance": {
+    "macOS": "not-run",
+    "Windows": "not-run"
+  },
+  "unappliedHostPrerequisite": "host-prerequisite.patch",
+  "temporaryProjectRegistration": "mcp:1f6ceb42-0ba6-43e7-93b9-07809843380e",
+  "parentReview": {
+    "requiredPasses": 24,
+    "toolchainBlocks": 2,
+    "freshDirectoryCollisionFixed": true,
+    "malformedSearchTypesRejected": 5,
+    "duplicateOpenInvariant": "exactly one host request; one view and one unchanged response independent of task scheduling",
+    "closedPackageMembers": 144
+  }
+}

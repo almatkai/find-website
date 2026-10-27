@@ -20,3 +20,5 @@ Supported browsers:
 - Vivaldi
 - Opera
 - Edge
+
+Standalone Rust V2 implementation and review instructions: [v2/README.md](v2/README.md).

@@ -1,0 +1,98 @@
+{
+  "sourceHead": "18b1298844a55c7d90de52f64334092ce7b931ff",
+  "files": [
+    {
+      "path": ".eslintrc.json",
+      "sha256": "739c28ed0495cec767903956a808561ca22d332ecb214ce609d63a82b678d516"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "b027adcbb6131ef49be335e9a699657351ca3d5bb2b474379634d1714f5a585b"
+    },
+    {
+      "path": ".prettierrc",
+      "sha256": "af858765de11954366be23467b95bae5e1a86818411c6723df7542cea9ffd521"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "2b2eb45f4719e401ff674536ed05b3368fb0da89b09aed451aabfb1485f87f2f"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "1d7dbdbcd4fe14dfa08334fab20bffad23c1290f195792a3a4420dadf9912f81"
+    },
+    {
+      "path": "README.md",
+      "sha256": "11040f80e2999ba06c47db9fdb03416687250cd3d2509be8a67a27b7873f3e99"
+    },
+    {
+      "path": "assets/find-website-2.png",
+      "sha256": "b6ee654c11729a707c64b2284af51f37585bb6a7c40c1b19b840da32f78b6c6a"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "bf56b45cfb4fc71591cbcb0a5b468a8962a0c4207fce149d813a02e49ff2a812"
+    },
+    {
+      "path": "metadata/find-website-1.png",
+      "sha256": "a33db347daa2e3b5181229041150d50f2a13ddf90aefbd51fcb09bd2b78bc8bf"
+    },
+    {
+      "path": "metadata/find-website-2.png",
+      "sha256": "b6ee654c11729a707c64b2284af51f37585bb6a7c40c1b19b840da32f78b6c6a"
+    },
+    {
+      "path": "metadata/find-website-3.png",
+      "sha256": "d1307e8ff502770b1fa50ed297f9fd54481df20163943b3d0625206ee6949ff5"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "9e1d726b049b0e6f00ac35e65ee71b7777269dcdfe43ffc182542a6fad707367"
+    },
+    {
+      "path": "package.json",
+      "sha256": "a482319166abb047aaf2cfb3bf81a6db15919b23179ed60f8dc763c23ff5887d"
+    },
+    {
+      "path": "raycast-env.d.ts",
+      "sha256": "e91432af02e90652c12079d1d6ce581732753aafc9e3c1f14a09b2086e08a5bd"
+    },
+    {
+      "path": "src/adapters.ts",
+      "sha256": "33a281261540d554a694591e35d0c0a7c0c7eba63f28e359226d560fb94141c9"
+    },
+    {
+      "path": "src/factory.ts",
+      "sha256": "bea06e25b5a8851ae7ef20b9fae823382aefb46ff06bb8b77a7be3d18984ae0d"
+    },
+    {
+      "path": "src/find.tsx",
+      "sha256": "373317a393c7095e4d9e6704997801d40a5ce5d5d1c981f0d90b71c8f7d906f3"
+    },
+    {
+      "path": "src/query-builder.ts",
+      "sha256": "4e47a00e1e64b175817673166df4f637468d1bfa1b6532c2ef8aa55a68a5f31f"
+    },
+    {
+      "path": "src/record.ts",
+      "sha256": "d599a39207679b2ae0e187806de4279aaf0e10ee0d78a3099e7f2db05a42346d"
+    },
+    {
+      "path": "src/step.tsx",
+      "sha256": "06bdae1484515da88e94c28fdade4257ae3e3465e37e7f7610f29f248ab4e24d"
+    },
+    {
+      "path": "src/types/ambient.d.ts",
+      "sha256": "e87eb9f9ba09357e04d2d380271f74b655ce9baadbde1016ee79f2d2ad4940d8"
+    },
+    {
+      "path": "test/smoke.test.ts",
+      "sha256": "fa245914bb472f2302203651e8736c873497c59de78298a607f665a4834745f2"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "bb151e8c2e5442f6f9e42b27c08d88b0f7d2c5c127268ce0aedab2ef964b1eee"
+    }
+  ],
+  "installation": "npm ci --ignore-scripts; exact original package-lock.json, disposable copy only"
+}

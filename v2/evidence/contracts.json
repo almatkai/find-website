@@ -1,0 +1,121 @@
+[
+  {
+    "repo": "sdk",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "path": "Cargo.toml",
+    "blob": "6818bed893658b3f922ce3f67268203fe97a04cd",
+    "sha256": "f3f6c5a49f92dced2ff7b8ea9c5942d826a8a6c3cdade67f62003ded86b506dd"
+  },
+  {
+    "repo": "sdk",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "path": "LICENSE",
+    "blob": "c22db4c5658fa074557976ac119021cdaa567132",
+    "sha256": "0ed6b1b2760294d4aaaa45be38e166fcc0168e1dd5190423c096fcbe1c94afbf"
+  },
+  {
+    "repo": "sdk",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "path": "NOTICE",
+    "blob": "034e832da671561e68f76321b677c3a8cf443020",
+    "sha256": "aa04ab6115cfc2e2172b0613013611a59dc487c70f3e2dfbd2f135326d703c74"
+  },
+  {
+    "repo": "sdk",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "path": "src/lib.rs",
+    "blob": "93b6bf751dc4c776a37f48fc3427196a2418536f",
+    "sha256": "7ffb2da74cfcf91f428453cf90594baa79b21251b7df77756348e0acda79cd16"
+  },
+  {
+    "repo": "sdk",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "path": "src/context.rs",
+    "blob": "731ffe98f7d5078e597250df00e85e01c429e93c",
+    "sha256": "9d8498bf3799690703c0a4e70fed2c9356850cc0c4e35370104fd09898c09efa"
+  },
+  {
+    "repo": "sdk",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "path": "src/runner.rs",
+    "blob": "056f7e9459594ac96f6d3c0f22c328bac96cfd99",
+    "sha256": "975350f717db0a3bf9cac11e9efd733719d2148544c2e38d82758c92a0a88053"
+  },
+  {
+    "repo": "sdk",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "path": "SDK_API.md",
+    "blob": "679ea21194c9f9cc86e4f4bdc25af288212a04e4",
+    "sha256": "73945c65d763a82ee1bd64b2f30418f8aaec2e75966d71d7b774e7f7e40f098e"
+  },
+  {
+    "repo": "sdk",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "path": "PROTOCOL.md",
+    "blob": "b833d6e72a1dd76ce2e46f26ec4cd40bd7ea3a18",
+    "sha256": "0bc474c2e79e6e3f46ad2d577f83144ad69bd87cb17b74600a17178bcc257371"
+  },
+  {
+    "repo": "sdk",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "path": "HOST_INTEGRATION.md",
+    "blob": "240b49d48f789c4f37abab9fdc653c03ccacd6ff",
+    "sha256": "88e6ca0c1090bcdf5d5501583e52e3eb7b0a369f4fea17ce4b01616c2f69d9a8"
+  },
+  {
+    "repo": "host",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "path": "src/shared/extensionRuntime.ts",
+    "blob": "2c0f347d84f6ca3da42518a6af5650159413f916",
+    "sha256": "47a290032a9967e2dee5142030b4ef8cfc5237a79521aa535f8a12d8c16deda4"
+  },
+  {
+    "repo": "host",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "path": "src-tauri/src/native_core/extensions/native.rs",
+    "blob": "4b964adf432e6245abfd9e1cd69c0f523d4cf4e9",
+    "sha256": "f11d1f436fa5f9b045a7ac25f3516adb0efc6d4c12ce1f0f0c4768940fafe16f"
+  },
+  {
+    "repo": "host",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "path": "src/renderer/ExtensionRuntimeView.tsx",
+    "blob": "e43a39425078b1c14c25981a9bae02a43b5749ac",
+    "sha256": "c8378d1a1cc91cf622f81dc1bd88ed986ea2e9c396f7ff497e649171f573c5e8"
+  },
+  {
+    "repo": "host",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "path": "src/renderer/src/raycast-api/list-runtime.tsx",
+    "blob": "5466c70489fd9dc2ae73118bc637ef98cf106487",
+    "sha256": "c7e253c34ce6e0a5132cab96bf1f0388393faca79ff57c3fdc7956f377a0ab0f"
+  },
+  {
+    "repo": "host",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "path": "src/renderer/extensionImages.ts",
+    "blob": "b257a30af275cf69b445c7fd4a1bab38da215531",
+    "sha256": "053b98b523ed3ae06957d5eb84b0c4243db5ef4725614580e498ead7c53a518a"
+  },
+  {
+    "repo": "host",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "path": "src-tauri/src/native_core/platform.rs",
+    "blob": "18f1539aafc664b22dac374e39addfa29548213c",
+    "sha256": "33e6b7ec5b305ee3ffb857985d0483e54891998ff2a51c10f12695b80a1953e6"
+  },
+  {
+    "repo": "host",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "path": "src-tauri/src/native_core/extensions/process_host.rs",
+    "blob": "707ee4c60ed2dc02ce016f19afa4f61d8ac0b011",
+    "sha256": "daf45815d76762323c6c1320c88ed24dfe28160a60bb4974b8073e3f17a3b982"
+  },
+  {
+    "repo": "host",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "path": "schemas/extension-v3.schema.json",
+    "blob": "d22369213af9f6e7d8e2b40eae9ca5f2091dc742",
+    "sha256": "6f42f0316aa88097703496e828b11afcc7caecf8477fa7502df903c3ad2a8048"
+  }
+]
