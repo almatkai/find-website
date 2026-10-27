@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 3,
+  "id": "com.tezbar.native.find-website",
+  "slug": "find-website",
+  "name": "Find Website",
+  "version": "2.0.0",
+  "description": "Quickly find the website you are looking for.",
+  "icon": "resources/logo.png",
+  "author": "almatkai",
+  "runtime": "rust",
+  "execution": "process",
+  "protocolVersion": 1,
+  "repository": "https://github.com/almatkai/find-website",
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "commands": [
+    {
+      "name": "find",
+      "title": "Find Website",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "timeoutMs": 15000,
+      "refreshMs": null,
+      "concurrency": "serialize"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "browser",
+      "title": "Browser",
+      "description": "Select your browser",
+      "type": "dropdown",
+      "required": true,
+      "default": "chrome",
+      "data": [
+        {
+          "title": "Google Chrome",
+          "value": "chrome"
+        },
+        {
+          "title": "Orion",
+          "value": "orion"
+        },
+        {
+          "title": "Arc",
+          "value": "arc"
+        },
+        {
+          "title": "Safari",
+          "value": "safari"
+        },
+        {
+          "title": "Firefox",
+          "value": "firefox"
+        },
+        {
+          "title": "Zen Browser",
+          "value": "zen"
+        },
+        {
+          "title": "Brave Browser",
+          "value": "brave"
+        },
+        {
+          "title": "Vivaldi",
+          "value": "vivaldi"
+        },
+        {
+          "title": "Opera",
+          "value": "opera"
+        },
+        {
+          "title": "Microsoft Edge",
+          "value": "edge"
+        }
+      ]
+    },
+    {
+      "name": "profile",
+      "title": "Profile Directory",
+      "description": "(Google Chrome only) Directory where your profile's data is saved.",
+      "type": "textfield",
+      "required": true,
+      "default": "Default"
+    }
+  ],
+  "replaces": [
+    "com.tezbar.find-website",
+    "raycast.find-website"
+  ],
+  "capabilities": [
+    "shell.open"
+  ],
+  "artifacts": {},
+  "verification": [
+    {
+      "platform": "macOS",
+      "state": "not-run",
+      "note": "Native host/GUI acceptance not run."
+    },
+    {
+      "platform": "Windows",
+      "state": "not-run",
+      "note": "Native host/GUI acceptance not run."
+    }
+  ]
+}

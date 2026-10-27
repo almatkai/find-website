@@ -1,0 +1,11 @@
+{
+  "canonicalRoot": "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/find-website",
+  "prefix": "ax-986911a59900",
+  "stateDir": "v2/.qa/xerj",
+  "initialAutoindexExit": 3,
+  "initialSearch": "QueryBuilder returned relevant own-root passages",
+  "finalAutoindexExit": 1,
+  "complete": false,
+  "logSha256": "70fd41e8200b78b1582f155b9f7da84f2a8e726e946354c1eefdbc4398eebd6c",
+  "fallback": "Full source reads, git show, rg, real SQLite tests and hashes. No infrastructure repair or bypass."
+}

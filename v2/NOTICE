@@ -1,0 +1,25 @@
+Find Website V2
+
+Rust port of own Find Website at 18b1298844a55c7d90de52f64334092ce7b931ff,
+derived from raycast/extensions/extensions/find-website at
+6734d85992290066fd31a7f5bee3cca3d3545a1a.
+Original contributors: almatkai and ridemountainpig. Original logo is preserved
+byte-for-byte. See resources/icon-provenance.json and licenses/raycast-extensions-MIT.txt.
+
+Tezbar Rust extension SDK 0.1.1, immutable Git revision
+e955911f0bf5b558f9d3eb5183df0adc95c22af2: Apache-2.0.
+The SDK's authentic LICENSE and NOTICE are in licenses/tezbar-extension-sdk-0.1.1/.
+
+INI profile decoding semantics are translated from ini 5.0.0 (ISC; authentic
+notice in licenses/ini-5.0.0-LICENSE). There is no JavaScript product runtime.
+
+All Cargo.lock registry archives were SHA256-checked against their lock checksums.
+Authentic license, copyright, notice and AUTHORS files are preserved by crate/version
+under licenses/. r-efi AUTHORS includes the MIT grant and the copyright owners;
+both locked versions are preserved. SQLite's original copyright disclaimer is
+preserved from the locked amalgamation. SQLCipher's license is preserved from
+the archive for completeness; SQLCipher is not enabled.
+
+See evidence/dependencies.json in the source repository for archive checksums,
+MSRV declarations, precise evidence scope, and any evidence gaps. These records
+do not claim legal approval. Native host acceptance is not run on either OS.

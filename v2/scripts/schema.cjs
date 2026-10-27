@@ -1,0 +1,9 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..');const Ajv=require(path.join(root,'.qa/validator/node_modules/ajv/dist/2020'));const formats=require(path.join(root,'.qa/validator/node_modules/ajv-formats'));
+const ajv=new Ajv({strict:false,allErrors:true});formats(ajv);const validate=ajv.compile(JSON.parse(fs.readFileSync(path.join(root,'.qa/contracts/host-extension-v3.schema.json'))));const own=JSON.parse(fs.readFileSync(path.join(root,'extension.json')));
+assert(validate(own),JSON.stringify(validate.errors));
+const negatives=[v=>v.schemaVersion=2,v=>v.runtime='javascript',v=>v.execution='bun',v=>v.protocolVersion=2,v=>v.id='com.tezbar.find-website',v=>delete v.commands,v=>v.commands[0].platforms=[],v=>v.capabilities.push('arbitrary'),v=>v.preferences={},v=>v.artifacts={linux:{}},v=>v.artifacts={'aarch64-apple-darwin':{url:'http://insecure',sha256:'x',executable:'../bin/e',executableSha256:'x'}},v=>v.files={'../bad':'0'.repeat(64)},v=>v.unrecognized=true];
+for(const change of negatives){const v=structuredClone(own);change(v);assert.equal(validate(v),false);}
+const positive=structuredClone(own);positive.files={'bin/find-website-v2':'0'.repeat(64),'resources/logo.png':'1'.repeat(64)};positive.artifacts={'aarch64-apple-darwin':{url:'https://example.invalid/dev.zip',sha256:'0'.repeat(64),executable:'bin/find-website-v2',executableSha256:'0'.repeat(64)}};assert(validate(positive),JSON.stringify(validate.errors));
+if(process.argv[2]){const packaged=JSON.parse(fs.readFileSync(process.argv[2]));assert(validate(packaged),JSON.stringify(validate.errors));assert(packaged.files&&Object.keys(packaged.files).length>0);}
+console.log(`Pinned full schema3 validator: source/packaged positives + ${negatives.length} negatives passed`);

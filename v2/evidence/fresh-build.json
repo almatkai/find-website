@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "Cargo.toml": "b75563a365348a2e5011aaeb6d3c5e240f2d26880372533204558ed90cb69d2c",
+    "Cargo.lock": "d855ca101dcda17213e3daf1b40c68e10397d7800e984df07b81db1a914ebad2",
+    "src/lib.rs": "faa1ec9f8db50361ed8bb28f6ed58057f5d18f0c254376c25a527a784114d3b9",
+    "src/main.rs": "908d1390c8ba04da74d22c67888b31cf26ad76c26f6feb870a6ed0998e55f44b",
+    "src/paths.rs": "a080515b2d8a8f011b9ccdfc5bd9087247583c69ed619522785f11bb124b161d",
+    "src/query.rs": "83a89385880df8a6dfb828596a6ad59f15f636eb6b4f01a243ace8e0d01dfb1f",
+    "src/snapshot.rs": "03ac0cd6dc2966ba306e83a187030f70e906fdf015d4200e96c3b35becf38e26"
+  },
+  "buildLogSha256": "6bcc9088dbfaf8e14d639dfb5892466dffb313408b91d6b3415c9bbd947da455",
+  "exitCode": 0,
+  "cargoHome": ".qa/fresh-cargo-1fb856c44dea47f880e4915fc54a3427",
+  "target": ".qa/fresh-target-1fb856c44dea47f880e4915fc54a3427",
+  "initialState": "empty/nonexistent",
+  "sdkSource": "https://github.com/almatkai/tezbar-extension-sdk-rust.git",
+  "sdkRevision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+  "binary": ".qa/fresh-target-1fb856c44dea47f880e4915fc54a3427/release/find-website-v2"
+}
